@@ -22,7 +22,7 @@ const signIn = async (formData: FormData) => {
     }
     console.log(formDataRaw.password, user.hashedPassword);
     const validPassword = await new Argon2id().verify(
-      user.hashedPassword,
+      user.hashedPassword!,
       formDataRaw.password
     );
     if (!validPassword) {
