@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  input {
+    @apply text-slate-800 border border-slate-800 p-2 rounded-md;
+  }
+
+  button,
+  button[type="submit"] {
+    @apply bg-slate-800 text-white p-2 rounded-md;
+  }
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
